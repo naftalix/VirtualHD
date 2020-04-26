@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/Gui"/>
+    <qresource prefix="/">
+        <file>images/binary.png</file>
+        <file>images/binary2.png</file>
+        <file>images/createdisk.png</file>
+        <file>images/createfile.png</file>
+        <file>images/defrag.png</file>
+        <file>images/delete.png</file>
+        <file>images/format.png</file>
+        <file>images/mount.png</file>
+        <file>images/open.png</file>
+        <file>images/student.png</file>
+        <file>images/upload.png</file>
+        <file>images/save.png</file>
+        <file>images/sector.png</file>
+        <file>images/unmount.png</file>
+        <file>images/main.png</file>
+        <file>images/exit.jpg</file>
+        <file>images/Print.png</file>
+    </qresource>
+</RCC>

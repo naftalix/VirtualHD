@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GuiClass</class>
+ <widget class="QMainWindow" name="GuiClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>File Management System</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="gui.qrc">
+    <normaloff>:/images/main.png</normaloff>:/images/main.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>16</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="usesScrollButtons">
+       <bool>true</bool>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_1">
+       <attribute name="title">
+        <string>Menu Disk</string>
+       </attribute>
+       <widget class="QLabel" name="labelDAT">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>21</y>
+          <width>121</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Disk DAT map</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>261</width>
+          <height>411</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="labelVHD">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <italic>false</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+             <strikeout>false</strikeout>
+             <kerning>true</kerning>
+            </font>
+           </property>
+           <property name="text">
+            <string>Volume Header</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableView" name="vhdData">
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="autoScroll">
+            <bool>true</bool>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>true</bool>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::NoSelection</enum>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>4</width>
+             <height>4</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QTableView" name="datView">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>46</y>
+          <width>371</width>
+          <height>371</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="autoScroll">
+         <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>9</number>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>0</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>9</number>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>0</number>
+        </attribute>
+       </widget>
+       <widget class="QLabel" name="labelDATsum">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>450</y>
+          <width>371</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>No usable disk have been found...</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>430</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <italic>true</italic>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="text">
+         <string>DAT details:</string>
+        </property>
+       </widget>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>490</y>
+          <width>261</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelDAT_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>470</y>
+          <width>121</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>In use:</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>File Menu</string>
+       </attribute>
+       <widget class="QLabel" name="labelFileList_2">
+        <property name="geometry">
+         <rect>
+          <x>172</x>
+          <y>9</y>
+          <width>93</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>File Header</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="fileData">
+        <property name="geometry">
+         <rect>
+          <x>186</x>
+          <y>32</y>
+          <width>211</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelFileList">
+        <property name="geometry">
+         <rect>
+          <x>3</x>
+          <y>9</y>
+          <width>63</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>File List</string>
+        </property>
+       </widget>
+       <widget class="QListView" name="fileList">
+        <property name="geometry">
+         <rect>
+          <x>7</x>
+          <y>32</y>
+          <width>172</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <property name="tabKeyNavigation">
+         <bool>true</bool>
+        </property>
+        <property name="dragEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>4</width>
+          <height>4</height>
+         </size>
+        </property>
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="viewMode">
+         <enum>QListView::ListMode</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelFileList_3">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>10</y>
+          <width>101</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>File FAT map</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="fatView">
+        <property name="geometry">
+         <rect>
+          <x>404</x>
+          <y>32</y>
+          <width>371</width>
+          <height>371</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>9</number>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>0</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>9</number>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>0</number>
+        </attribute>
+       </widget>
+       <widget class="QTableView" name="allocationTableView">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>428</y>
+          <width>221</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelFileList_4">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>406</y>
+          <width>131</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Allocation Table</string>
+        </property>
+       </widget>
+       <widget class="QCommandLinkButton" name="commandLinkButtonShowDir">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>520</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Show Dir</string>
+        </property>
+        <property name="description">
+         <string>Shows the root directory</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDisk">
+    <property name="title">
+     <string>Disk</string>
+    </property>
+    <addaction name="actionCreate_Disk"/>
+    <addaction name="actionRecreate_Disk"/>
+    <addaction name="separator"/>
+    <addaction name="actionMount_Disk"/>
+    <addaction name="actionUnmount_Disk"/>
+    <addaction name="separator"/>
+    <addaction name="actionFormat_Disk"/>
+    <addaction name="separator"/>
+    <addaction name="actionSector"/>
+    <addaction name="actionDefrag"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuStudent_File">
+     <property name="title">
+      <string>Student File</string>
+     </property>
+     <property name="icon">
+      <iconset resource="gui.qrc">
+       <normaloff>:/images/student.png</normaloff>:/images/student.png</iconset>
+     </property>
+     <addaction name="actionCreate_Student_File"/>
+     <addaction name="actionUpload_Studen_File"/>
+     <addaction name="actionDownload_Student_File"/>
+     <addaction name="actionOpen_Student_File"/>
+     <addaction name="actionPrint_students_file"/>
+    </widget>
+    <addaction name="actionUpload_File"/>
+    <addaction name="actionDownload_File"/>
+    <addaction name="actionDelete_File"/>
+    <addaction name="separator"/>
+    <addaction name="menuStudent_File"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionInfo"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuDisk"/>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionCreate_Disk">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/createdisk.png</normaloff>:/images/createdisk.png</iconset>
+   </property>
+   <property name="text">
+    <string>Create Disk</string>
+   </property>
+  </action>
+  <action name="actionRecreate_Disk">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/createdisk.png</normaloff>:/images/createdisk.png</iconset>
+   </property>
+   <property name="text">
+    <string>Recreate Disk</string>
+   </property>
+  </action>
+  <action name="actionMount_Disk">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/mount.png</normaloff>:/images/mount.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mount Disk</string>
+   </property>
+  </action>
+  <action name="actionUnmount_Disk">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/unmount.png</normaloff>:/images/unmount.png</iconset>
+   </property>
+   <property name="text">
+    <string>Unmount Disk</string>
+   </property>
+  </action>
+  <action name="actionFormat_Disk">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/format.png</normaloff>:/images/format.png</iconset>
+   </property>
+   <property name="text">
+    <string>Format Disk</string>
+   </property>
+  </action>
+  <action name="actionSector">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/sector.png</normaloff>:/images/sector.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sector</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/exit.jpg</normaloff>:/images/exit.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionUpload_File">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/upload.png</normaloff>:/images/upload.png</iconset>
+   </property>
+   <property name="text">
+    <string>Upload File..</string>
+   </property>
+  </action>
+  <action name="actionDownload_File">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Download File..</string>
+   </property>
+  </action>
+  <action name="actionDelete_File">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete File</string>
+   </property>
+  </action>
+  <action name="actionCreate_Student_File">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/createfile.png</normaloff>:/images/createfile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Create students file</string>
+   </property>
+   <property name="toolTip">
+    <string>Create students file</string>
+   </property>
+  </action>
+  <action name="actionDownload_Student_File">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Download students file</string>
+   </property>
+   <property name="toolTip">
+    <string>Download students file</string>
+   </property>
+  </action>
+  <action name="actionOpen_Student_File">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/open.png</normaloff>:/images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open students file</string>
+   </property>
+   <property name="toolTip">
+    <string>Open students file</string>
+   </property>
+  </action>
+  <action name="actionUpload_Studen_File">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/upload.png</normaloff>:/images/upload.png</iconset>
+   </property>
+   <property name="text">
+    <string>Upload students file</string>
+   </property>
+   <property name="toolTip">
+    <string>Upload students file</string>
+   </property>
+  </action>
+  <action name="actionDefrag">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/defrag.png</normaloff>:/images/defrag.png</iconset>
+   </property>
+   <property name="text">
+    <string>Defrag</string>
+   </property>
+  </action>
+  <action name="actionPrint_students_file">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/images/Print.png</normaloff>:/images/Print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print students file</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>vhdData</tabstop>
+  <tabstop>datView</tabstop>
+  <tabstop>fileList</tabstop>
+  <tabstop>fileData</tabstop>
+  <tabstop>fatView</tabstop>
+  <tabstop>allocationTableView</tabstop>
+ </tabstops>
+ <resources>
+  <include location="gui.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>GuiClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>383</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
